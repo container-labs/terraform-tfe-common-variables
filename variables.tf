@@ -62,6 +62,6 @@ variable "zone" {
 }
 
 variable "billing_account_id" {
-  default = "013CE5-22E3A5-E29944"
+  default = ""
 }
 
