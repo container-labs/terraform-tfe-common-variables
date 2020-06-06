@@ -7,6 +7,7 @@ resource "tfe_variable" "environment" {
   key          = "environment"
   value        = var.environment
   category     = "terraform"
+  sensitive    = false
   workspace_id = var.workspace_id
 }
 
@@ -15,6 +16,7 @@ resource "tfe_variable" "google_project" {
   key          = "GOOGLE_PROJECT"
   value        = var.google_project
   category     = "env"
+  sensitive    = false
   workspace_id = var.workspace_id
 }
 
@@ -23,6 +25,7 @@ resource "tfe_variable" "project_id_terraform" {
   key          = "project_id"
   value        = var.google_project
   category     = "terraform"
+  sensitive    = false
   workspace_id = var.workspace_id
 }
 
@@ -31,6 +34,7 @@ resource "tfe_variable" "google_region_environment" {
   key          = "GOOGLE_REGION"
   value        = var.google_region
   category     = "env"
+  sensitive    = false
   workspace_id = var.workspace_id
 }
 
@@ -39,14 +43,7 @@ resource "tfe_variable" "google_region_terraform" {
   key          = "region"
   value        = var.google_region
   category     = "terraform"
-  workspace_id = var.workspace_id
-}
-
-resource "tfe_variable" "instance_number" {
-  count        = length(var.instance_number) > 0 ? 1 : 0
-  key          = "instance_number"
-  value        = var.instance_number
-  category     = "terraform"
+  sensitive    = false
   workspace_id = var.workspace_id
 }
 

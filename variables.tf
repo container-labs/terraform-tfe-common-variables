@@ -17,11 +17,6 @@ variable "google_region" {
   default     = ""
 }
 
-variable "instance_number" {
-  description = "When multiple stacks exist in the same region and environment, instance_number differentiates the instances of those stacks"
-  default     = ""
-}
-
 variable "location" {
   description = "For resources supporting the `location` attribute (becoming more common) the value of this variable can be used."
   default     = ""
