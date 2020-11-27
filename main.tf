@@ -1,7 +1,3 @@
-# This code is a prototype and not engineered for production use.
-# Error handling is incomplete or inappropriate for usage beyond
-# a development sample.
-
 resource "tfe_variable" "environment" {
   count        = length(var.environment) > 0 ? 1 : 0
   key          = "environment"
